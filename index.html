@@ -16,6 +16,11 @@ h1{font-family:Georgia,"Times New Roman",serif;letter-spacing:2px;font-size:clam
 .toolbar{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin:22px 0 0}
 .field{display:flex;flex-direction:column;gap:7px;min-width:190px}
 .field label{font-size:12px;color:var(--gold);font-weight:700;letter-spacing:.35px}
+input[type="search"]{border:1px solid #80705b;background:#27221c;color:#fff4e4;border-radius:8px;padding:11px 13px;font-size:15px;min-height:45px;width:100%;min-width:225px;outline:none}
+input[type="search"]::placeholder{color:#afa08c;opacity:1}
+input[type="search"]:focus-visible{outline:3px solid #e2b977;outline-offset:2px}
+input[type="search"]::-webkit-search-cancel-button{cursor:pointer}
+.search-field{flex:1 1 260px;max-width:390px}
 select{appearance:auto;border:1px solid #80705b;background:#27221c;color:#fff4e4;border-radius:8px;padding:11px 13px;font-size:15px;min-height:45px;min-width:202px;cursor:pointer}
 select:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #e2b977;outline-offset:2px}
 button{border-radius:8px;min-height:45px;padding:10px 17px;font-size:14px;color:#f6e8d5;background:#51402d;border:1px solid #9f8464;font-weight:650;cursor:pointer}
@@ -39,6 +44,9 @@ td{vertical-align:middle;height:59px}
 .level{font-size:15px;white-space:nowrap}
 .bonus{display:block;color:#b7ae9f;font-size:11px;font-weight:400;margin-top:2px}
 .mat{display:flex;align-items:center;gap:7px;text-align:left;margin:4px 0;min-height:34px}
+.mat.matched{border-left:3px solid #d9aa68;background:#3a3023;border-radius:4px;padding:4px 6px;margin-left:-7px}
+.mat.matched .item-name{color:#ffe1ac;font-weight:700}
+.no-results{padding:26px;border:1px dashed #78644c;border-radius:9px;background:#1e1b17;text-align:center;color:#e0ceb0;font-size:15px}
 .icon-link{flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:4px;background:#0f0e0d;border:1px solid #4a4035}
 .icon-link img{width:30px;height:30px;object-fit:contain}
 .icon-fallback{display:flex;justify-content:center;align-items:center;background:#32271e;color:#e7b37c;font-weight:700;font-size:17px;width:30px;height:30px}
@@ -48,7 +56,7 @@ td{vertical-align:middle;height:59px}
 .footer{border-top:1px solid #4c3e31;padding-top:17px;margin-top:45px;color:#aca397;font-size:12px;line-height:1.65}
 .footer a{color:#e6c598}
 #failures{color:#d8b07d}
-@media(max-width:720px){.wrap{padding:18px 12px 40px}.toolbar{gap:12px}.field{flex:1 1 150px;min-width:130px}.field select{width:100%;min-width:0}.spacer{display:none}button{width:100%}table{min-width:1130px}.category-title{font-size:21px}}
+@media(max-width:720px){.wrap{padding:18px 12px 40px}.toolbar{gap:12px}.field{flex:1 1 150px;min-width:130px}.field select,.field input{width:100%;min-width:0}.spacer{display:none}button{width:100%}table{min-width:1130px}.category-title{font-size:21px}}
 @media print{@page{size:A3 landscape;margin:8mm}body{background:#151412;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{padding:0;max-width:none}.toolbar,.footer,.stats{display:none}.hero{padding-bottom:8px;margin:0 0 8px}h1{font-size:28px}.description{font-size:11px}.category{break-before:page;margin:0 0 7px}.category:first-child{break-before:auto}.table-scroller{border:0;box-shadow:none;overflow:visible}table{min-width:0}th,td{padding:4px 6px}.mat{gap:4px;min-height:25px;margin:1px 0}.icon-link{width:25px;height:25px}.icon-link img{width:23px;height:23px}.item-name{font-size:10px}tbody td{height:38px}.category-title{font-size:18px}}
 </style>
 </head>
@@ -61,6 +69,7 @@ td{vertical-align:middle;height:59px}
 <div class="toolbar">
   <div class="field"><label for="lang" id="langLabel">Idioma</label><select id="lang" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option></select></div>
   <div class="field"><label for="category" id="categoryLabel">Categoría</label><select id="category" aria-label="Categoría"><option value="all">Todas las categorías</option></select></div>
+  <div class="field search-field"><label for="search" id="searchLabel">Buscar material</label><input id="search" type="search" placeholder="Ej.: alm, almeja, clam…" autocomplete="off" spellcheck="false" maxlength="100" aria-controls="tables" /></div>
   <span class="spacer"></span>
   <button type="button" id="print">Imprimir / Guardar PDF</button>
 </div>
@@ -79,8 +88,8 @@ const names={
  brazaletes:['Brazaletes','Bracelets'],collares:['Collares','Necklaces']
 };
 const ui={
- es:{title:'Guía de materiales de mejora',desc:'Todas las categorías de equipamiento · Mejoras de +5 a +9 · Sin costes',language:'Idioma',category:'Categoría',all:'Todas las categorías',print:'Imprimir / Guardar PDF',level:'Nivel',rows:'niveles',groups:'categorías',onlyYang:'Sin materiales (solo Yang)',note:'Los iconos se cargan desde las wikis de Gameforge y necesitan Internet. Si falta alguno, verás «!» en su lugar. Haz clic en un icono para consultar el material en la wiki oficial.',failed:'iconos no cargados'},
- en:{title:'Upgrade Materials Guide',desc:'All equipment categories · Upgrades from +5 to +9 · No costs',language:'Language',category:'Category',all:'All categories',print:'Print / Save as PDF',level:'Level',rows:'levels',groups:'categories',onlyYang:'No materials (Yang only)',note:'Item icons are loaded from Gameforge wikis and require internet access. If an icon fails, you will see “!” instead. Click an icon to view the item on the official wiki.',failed:'icons could not be loaded'}
+ es:{title:'Guía de materiales de mejora',desc:'Todas las categorías de equipamiento · Mejoras de +5 a +9 · Sin costes',language:'Idioma',category:'Categoría',all:'Todas las categorías',print:'Imprimir / Guardar PDF',level:'Nivel',rows:'niveles',groups:'categorías',onlyYang:'Sin materiales (solo Yang)',search:'Buscar material',searchPlaceholder:'Ej.: alm, almeja, clam…',noResults:'No hay equipamientos que utilicen ese material. Prueba otro nombre o cambia la categoría.',matches:'niveles encontrados',note:'Los iconos se cargan desde las wikis de Gameforge y necesitan Internet. Si falta alguno, verás «!» en su lugar. Haz clic en un icono para consultar el material en la wiki oficial.',failed:'iconos no cargados'},
+ en:{title:'Upgrade Materials Guide',desc:'All equipment categories · Upgrades from +5 to +9 · No costs',language:'Language',category:'Category',all:'All categories',print:'Print / Save as PDF',level:'Level',rows:'levels',groups:'categories',onlyYang:'No materials (Yang only)',search:'Search material',searchPlaceholder:'E.g. clam, almeja…',noResults:'No equipment uses that material. Try a different name or category.',matches:'matching levels',note:'Item icons are loaded from Gameforge wikis and require internet access. If an icon fails, you will see “!” instead. Click an icon to view the item on the official wiki.',failed:'icons could not be loaded'}
 };
 const bonusMap={
  'Vel. mov. montura':'Mount movement speed','Vel. atq. montura':'Mount attack speed',
@@ -96,18 +105,34 @@ const bonusMap={
  'Res. flecha.':'Arrow resistance','Tenacidad.':'Tenacity','Vel. mov.':'Movement speed'
 };
 const $=id=>document.getElementById(id);
-const lang=$('lang'), category=$('category');
+const lang=$('lang'), category=$('category'), search=$('search');
 let broken=0;
+// Coincide con cualquier parte del nombre, en español o en inglés.
+// Ignora tildes y mayúsculas, y acepta plurales como «almejas» o «clams».
+function normalized(str){
+ return String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase().trim();
+}
+function matchesItem(es, query){
+ if(!query)return true;
+ const item=DATA.items[es];
+ const alternatives=[query];
+ if(query.length>3 && query.endsWith('s'))alternatives.push(query.slice(0,-1));
+ const spanish=normalized(es), english=normalized(item ? item.en : '');
+ return alternatives.some(q=>spanish.includes(q)||english.includes(q));
+}
+function matchesRow(row,query){
+ return !query || row.cells.some(cell=>cell.some(([,name])=>matchesItem(name,query)));
+}
 function el(tag,className,text){
  const node=document.createElement(tag);
  if(className)node.className=className;
  if(text!==undefined)node.textContent=text;
  return node;
 }
-function itemElement(qty,es){
+function itemElement(qty,es,query){
  const d=DATA.items[es];
  const name=lang.value==='en'?d.en:es;
- const wrap=el('div','mat');
+ const wrap=el('div',matchesItem(es,query) && query ? 'mat matched' : 'mat');
  const link=el('a','icon-link');
  link.href='https://'+(lang.value==='en'?'en':'es')+'-wiki.metin2.gameforge.com/index.php/'+encodeURIComponent((lang.value==='en'?d.en:es).replace(/ /g,'_'));
  link.target='_blank';link.rel='noopener noreferrer';
@@ -125,21 +150,27 @@ function itemElement(qty,es){
  return wrap;
 }
 function render(){
- const locale=lang.value, t=ui[locale], cat=category.value;
+ const locale=lang.value, t=ui[locale], cat=category.value, query=normalized(search.value);
  document.documentElement.lang=locale;
  document.title='Metin2 · '+t.title;
  $('pageTitle').textContent=t.title;
  $('description').textContent=t.desc;
  $('langLabel').textContent=t.language;
  $('categoryLabel').textContent=t.category;
+ $('searchLabel').textContent=t.search;
+ search.placeholder=t.searchPlaceholder;
+ search.setAttribute('aria-label',t.search);
  $('print').textContent=t.print;
  $('sourceNote').textContent=t.note;
  for(const opt of category.options)opt.textContent=opt.value==='all'?t.all:names[opt.value][locale==='en'?1:0];
  const root=$('tables');root.replaceChildren();broken=0;$('failures').textContent='';
- const keys=cat==='all'?Object.keys(names):[cat];
- let rowCount=0;
- for(const key of keys){
-  const rows=DATA.categories[key];rowCount+=rows.length;
+ const selectedKeys=cat==='all'?Object.keys(names):[cat];
+ let rowCount=0, shownCategories=0;
+ for(const key of selectedKeys){
+  const rows=DATA.categories[key].filter(row=>matchesRow(row,query));
+  if(!rows.length)continue;
+  shownCategories++;
+  rowCount+=rows.length;
   const section=el('section','category');section.id='cat-'+key;
   const hd=el('div','category-head');
   hd.append(el('h2','category-title',names[key][locale==='en'?1:0]),el('span','count',rows.length+' '+t.rows));
@@ -160,18 +191,28 @@ function render(){
    for(const cell of row.cells){
     const td=el('td');
     if(!cell||!cell.length){td.appendChild(el('span','empty','—'));td.title=t.onlyYang;}
-    else for(const [qty,es] of cell)td.appendChild(itemElement(qty,es));
+    else for(const [qty,es] of cell)td.appendChild(itemElement(qty,es,query));
     tr.appendChild(td);
    }
    tb.appendChild(tr);
   }
   table.appendChild(tb);scroll.appendChild(table);section.appendChild(scroll);root.appendChild(section);
  }
- $('stats').textContent=keys.length+' '+t.groups+' · '+rowCount+' '+t.rows;
+ if(!rowCount){
+  root.appendChild(el('div','no-results',t.noResults));
+ }
+ const groupLabel=shownCategories===1?(locale==='es'?'categoría':'category'):t.groups;
+ const levelLabel=rowCount===1?(query?(locale==='es'?'nivel encontrado':'matching level'):(locale==='es'?'nivel':'level')):(query?t.matches:t.rows);
+ $('stats').textContent=shownCategories+' '+groupLabel+' · '+rowCount+' '+levelLabel;
 }
 for(const key of Object.keys(names)){const opt=el('option','',names[key][0]);opt.value=key;category.appendChild(opt)}
 lang.addEventListener('change',render);
 category.addEventListener('change',render);
+let searchTimer;
+search.addEventListener('input',()=>{
+ clearTimeout(searchTimer);
+ searchTimer=setTimeout(render,120);
+});
 $('print').addEventListener('click',()=>window.print());
 render();
 </script>
