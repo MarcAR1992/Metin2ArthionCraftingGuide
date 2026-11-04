@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17100e">
+<meta name="description" content="Guía de crafteo de Metin2: materiales para mejorar armas, armaduras, cascos, escudos, zapatos, pendientes, brazaletes y collares del +5 al +9.">
+<title>Metin2 · Equipo y materiales</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html" data-home-link aria-label="Volver al inicio">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30h32l-6 5H14l-6-5ZM18 35v5m12-5v5H16"/><path d="M13 27l6-14h12l5 14"/><path d="m23 11 2-7 5 8"/></svg></span>
+      <span><span class="brand-name">LA FORJA</span><span class="brand-caption">Metin2 · Compendium</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a id="navCraft" href="crafting.html" aria-current="page">01 · Equipo</a>
+    </nav>
+  </div>
+</header>
+<main class="shell craft-main">
+  <div class="breadcrumb"><a href="index.html" data-home-link id="breadcrumbHome">Inicio</a><span>/</span><span id="breadcrumbCurrent">Equipo</span></div>
+  <header class="craft-hero">
+    <div>
+      <div class="kicker" id="heroKicker">LA FORJA / MATERIALES</div>
+      <h1 id="pageTitle">Guía de materiales de mejora</h1>
+      <p class="description" id="description">Todas las categorías de equipamiento · Mejoras de +5 a +9 · Sin costes</p>
+    </div>
+    <div class="craft-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 43h36l-7 7H21l-7-7ZM24 50v6h16v-6M16 36h32l-4 7H20l-4-7Z"/><path d="M32 8c-9 10-1 13-5 18-3-5-7-9-7-9-7 13 1 19 12 19s18-9 12-20c-2 6-5 7-5 7 0-9-3-12-7-15Z"/></svg></div>
+  </header>
+  <section class="filter-panel" aria-label="Filtros de crafteo">
+    <div class="filter-head"><span id="filterTitle">Filtra tu equipamiento</span><span id="filterHint" class="mini">Encuentra materiales y mejoras al instante</span></div>
+    <div class="toolbar">
+      <div class="field"><label for="lang" id="langLabel">Idioma</label><select id="lang" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option></select></div>
+      <div class="field"><label for="category" id="categoryLabel">Categoría</label><select id="category" aria-label="Categoría"><option value="all">Todas las categorías</option></select></div>
+      <div class="field search-field"><label for="search" id="searchLabel">Buscar material</label><input id="search" type="search" placeholder="Ej.: alm, almeja, clam…" autocomplete="off" spellcheck="false" maxlength="100" aria-controls="tables"></div>
+      <span class="spacer"></span>
+      <button type="button" class="print-btn" id="print">Imprimir / Guardar PDF</button>
+    </div>
+  </section>
+  <div class="stats" id="stats" aria-live="polite"></div>
+  <div id="tables"></div>
+  <footer class="info-footer">
+    <div id="sourceNote">Los iconos se cargan desde las wikis de Gameforge y necesitan Internet. Si falta alguno, verás «!» en su lugar. Haz clic en un icono para consultar el material en la wiki oficial.</div>
+    <div id="failures" role="status"></div>
+    <p><a href="https://es-wiki.metin2.gameforge.com/index.php/Items_para_mejoras" target="_blank" rel="noopener noreferrer">Wiki oficial Metin2 (ES)</a> · <a href="https://en-wiki.metin2.gameforge.com/index.php/Upgrade_Items" target="_blank" rel="noopener noreferrer">Metin2 official wiki (EN)</a></p>
+  </footer>
+</main>
+<footer class="site-footer"><div class="shell footer-content"><span>LA FORJA · Guía no oficial para jugadores de Metin2</span><span>El mundo de Metin2, a un clic.</span></div></footer>
+<script id="game-data" type="application/json">{"categories":{"armas":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Diente de Jabalí"]],[[2,"Piel de Lobo+"]],[[2,"Coletero Rojo"]]]},{"level":"Lv 5","bonus":"","cells":[[],[],[[2,"Diente de Jabalí"]],[[2,"Piel de Lobo+"]],[[2,"Coletero Rojo"]]]},{"level":"Lv 10","bonus":"","cells":[[],[],[[2,"Garra de Lobo"]],[[2,"Garra de Lobo+"]],[[2,"Ornamentación"]]]},{"level":"Lv 15","bonus":"","cells":[[],[],[[2,"Bilis de oso"]],[[2,"Piel de Pie de Oso+"]],[[2,"Coletero Blanco+"]]]},{"level":"Lv 20","bonus":"","cells":[[],[],[[2,"Piel de Lobo"]],[[2,"Bilis de oso+"]],[[2,"Madeja"]]]},{"level":"Lv 25","bonus":"","cells":[[[2,"Trozo de Armadura Rota"]],[[2,"Porcelana Rota"]],[[2,"Shuriken+"],[1,"Espinas de Pescado"]],[[2,"Botín del Salvaje"],[1,"Espinas de Pescado"]],[[2,"Cola de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 30","bonus":"","cells":[[],[],[],[],[]]},{"level":"Lv 32","bonus":"","cells":[[[2,"Trozo de Armadura Rota"]],[[2,"Porcelana Rota"]],[[2,"Shuriken+"],[1,"Espinas de Pescado"]],[[2,"Cola de Escorpión"],[2,"Espinas de Pescado"]],[[2,"Cola de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 36","bonus":"","cells":[[[2,"Trozo de Gema"]],[[2,"Shuriken"]],[[2,"Uniforme Negro"],[1,"Espinas de Pescado"]],[[2,"Diente de Orco"],[2,"Espinas de Pescado"]],[[2,"Diente de Orco+"],[1,"Almeja"]]]},{"level":"Lv 40","bonus":"","cells":[[[2,"Amuleto de Orco"]],[[2,"Amuleto de Orco+"]],[[2,"Ojos de Araña"],[1,"Espinas de Pescado"]],[[2,"Talismán Desconocido"],[2,"Espinas de Pescado"]],[[2,"Libro Maldición"],[1,"Almeja"]]]},{"level":"Lv 45","bonus":"","cells":[[[2,"Talismán Desconocido+"]],[[2,"Libro Maldición+"]],[[2,"Gema del Demonio+"],[1,"Almeja"]],[[2,"Cuerno Ballena Asesina"],[1,"Almeja"]],[[2,"Piel de Yeti+"],[1,"Perla Blanca"]]]},{"level":"Lv 50","bonus":"","cells":[[[2,"Medicina Desconocida"]],[[2,"Pieza de Tela"]],[[2,"Trozo de Tela+"],[1,"Almeja"]],[[2,"Trozo de Hielo+"],[2,"Almeja"]],[[2,"Bola de Hielo+"],[1,"Perla Blanca"]]]},{"level":"Lv 55","bonus":"","cells":[[[2,"Cola de Escorpión+"]],[[2,"Recuerdo del Demonio"]],[[2,"Hoja"],[1,"Almeja"]],[[2,"Piel de Yeti"],[2,"Almeja"]],[[2,"Colmillo de Tigre"],[1,"Perla Azul"]]]},{"level":"Lv 60","bonus":"","cells":[[[2,"Cola de Serpiente+"]],[[2,"Lengua de Rana"]],[[2,"Ancas de Rana"],[1,"Almeja"]],[[2,"Bola de Hielo"],[2,"Almeja"]],[[2,"Melena Llameante"],[1,"Perla Azul"]]]},{"level":"Lv 65 PvM","bonus":"","cells":[[[2,"Patas de Araña"]],[[2,"Gema del Demonio"]],[[2,"Recuerdo del Demonio+"],[1,"Almeja"]],[[2,"Huesos de los dedos"],[2,"Almeja"]],[[2,"Símbolo del Guerrero"],[1,"Perla Roja"]]]},{"level":"Lv 65 PvP","bonus":"","cells":[[[2,"Cola de Serpiente+"]],[[2,"Lengua de Rana"]],[[2,"Ancas de Rana"],[1,"Perla Blanca"]],[[2,"Lechal"],[1,"Perla Azul"]],[[2,"Semillas Mágicas"],[1,"Perla Roja"]]]},{"level":"Lv 75","bonus":"","cells":[[[2,"Patas de Araña"]],[[2,"Gema del Demonio"]],[[2,"Recuerdo del Demonio+"],[1,"Perla Blanca"]],[[2,"Lechal"],[1,"Perla Azul"]],[[2,"Semillas Mágicas"],[1,"Perla Roja"]]]}],"armaduras":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Garra de Lobo"]],[[2,"Garra de Lobo+"]],[[2,"Ornamentación"]]]},{"level":"Lv 9","bonus":"","cells":[[],[],[[2,"Bilis de oso"]],[[2,"Piel de Pie de Oso+"]],[[2,"Coletero Blanco+"]]]},{"level":"Lv 18","bonus":"","cells":[[],[],[[2,"Piel de Tigre"]],[[2,"Coletero Blanco"]],[[2,"Horquilla ornamental"]]]},{"level":"Lv 26","bonus":"","cells":[[[2,"Trozo de Gema"]],[[2,"Shuriken"]],[[2,"Uniforme Negro"],[1,"Espinas de Pescado"]],[[2,"Diente de Orco"],[1,"Almeja"]],[[2,"Diente de Orco+"],[1,"Almeja"]]]},{"level":"Lv 34","bonus":"","cells":[[[2,"Bandera"]],[[2,"Cartilla Esotérica"]],[[2,"Aguja de Escorpión"],[1,"Espinas de Pescado"]],[[2,"Garra de Escorpión"],[1,"Almeja"]],[[2,"Piel de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 42","bonus":"","cells":[[[2,"Hoja Oxidada"]],[[2,"Cartilla Esotérica+"]],[[2,"Telaraña"],[1,"Espinas de Pescado"]],[[2,"Saco de Veneno de Araña"],[1,"Almeja"]],[[2,"Saco de Huevos de Araña"],[1,"Almeja"]]]},{"level":"Lv 48","bonus":"","cells":[[[2,"Medicina Desconocida"]],[[2,"Pieza de Tela"]],[[2,"Trozo de Tela+"],[1,"Almeja"]],[[2,"Trozo de Hielo+"],[2,"Almeja"]],[[2,"Bola de Hielo+"],[1,"Perla Blanca"]]]},{"level":"Lv 54","bonus":"","cells":[[[2,"Cola de Serpiente+"]],[[2,"Lengua de Rana"]],[[2,"Ancas de Rana"],[1,"Almeja"]],[[2,"Bola de Hielo"],[2,"Almeja"]],[[2,"Melena Llameante"],[1,"Perla Azul"]]]},{"level":"Lv 61","bonus":"","cells":[[[2,"Patas de Araña"]],[[2,"Gema del Demonio"]],[[2,"Recuerdo del Demonio+"],[1,"Almeja"]],[[2,"Huesos de los dedos"],[2,"Almeja"]],[[2,"Símbolo del Guerrero"],[1,"Perla Roja"]]]}],"cascos":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Piel de Pie de Oso"]],[[2,"Piel de Tigre Blanco"]],[[2,"Crema Facial"]]]},{"level":"Lv 21","bonus":"","cells":[[[2,"Trozo de Gema"]],[[2,"Shuriken"]],[[2,"Uniforme Negro"],[1,"Espinas de Pescado"]],[[2,"Botín del Salvaje"],[1,"Espinas de Pescado"]],[[2,"Piel de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 41","bonus":"","cells":[[[2,"Amuleto de Orco"]],[[2,"Amuleto de Orco+"]],[[2,"Ojos de Araña"],[1,"Espinas de Pescado"]],[[2,"Talismán Desconocido"],[1,"Almeja"]],[[2,"Libro Maldición"],[1,"Almeja"]]]}],"escudos":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Garra de Lobo"]],[[2,"Garra de Lobo+"]],[[2,"Ornamentación"]]]},{"level":"Lv 21","bonus":"","cells":[[[2,"Trozo de Gema"]],[[2,"Shuriken"]],[[2,"Uniforme Negro"],[1,"Espinas de Pescado"]],[[2,"Botín del Salvaje"],[1,"Espinas de Pescado"]],[[2,"Saco de Huevos de Araña"],[1,"Almeja"]]]},{"level":"Lv 41","bonus":"","cells":[[[2,"Hoja Oxidada"]],[[2,"Cartilla Esotérica+"]],[[2,"Telaraña"],[1,"Espinas de Pescado"]],[[2,"Saco de Veneno de Araña"],[1,"Almeja"]],[[2,"Saco de Huevos de Araña"],[1,"Almeja"]]]},{"level":"Lv 61","bonus":"","cells":[[[2,"Cola de Escorpión+"]],[[2,"Recuerdo del Demonio"]],[[2,"Hoja"],[1,"Perla Blanca"]],[[2,"Lechal"],[1,"Perla Azul"]],[[2,"Semillas Mágicas"],[1,"Perla Roja"]]]}],"zapatos":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Diente de Jabalí"]],[[2,"Piel de Lobo+"]],[[2,"Coletero Rojo"]]]},{"level":"Lv 9","bonus":"Vel. mov. montura","cells":[[],[],[[2,"Piel de Lobo"]],[[2,"Bilis de oso+"]],[[2,"Madeja"]]]},{"level":"Lv 17","bonus":"Máx. HP","cells":[[],[],[[2,"Piel de Pie de Oso"]],[[2,"Piel de Tigre Blanco"]],[[2,"Crema Facial"]]]},{"level":"Lv 23","bonus":"Vel. atq. montura","cells":[[],[],[[2,"Piel de Tigre"]],[[2,"Coletero Blanco"]],[[2,"Horquilla ornamental"]]]},{"level":"Lv 29","bonus":"Res. flecha","cells":[[[2,"Trozo de Gema"]],[[2,"Shuriken"]],[[2,"Uniforme Negro"],[1,"Espinas de Pescado"]],[[2,"Diente de Orco"],[1,"Almeja"]],[[2,"Diente de Orco+"],[1,"Almeja"]]]},{"level":"Lv 34","bonus":"Yang","cells":[[[2,"Trozo de Gema"]],[[2,"Shuriken"]],[[2,"Uniforme Negro"],[1,"Espinas de Pescado"]],[[2,"Diente de Orco"],[1,"Almeja"]],[[2,"Diente de Orco+"],[1,"Almeja"]]]},{"level":"Lv 39","bonus":"Drop","cells":[[[2,"Bandera"]],[[2,"Cartilla Esotérica"]],[[2,"Aguja de Escorpión"],[1,"Espinas de Pescado"]],[[2,"Garra de Escorpión"],[1,"Almeja"]],[[2,"Piel de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 43","bonus":"EXP","cells":[[[2,"Bandera"]],[[2,"Cartilla Esotérica"]],[[2,"Aguja de Escorpión"],[1,"Espinas de Pescado"]],[[2,"Garra de Escorpión"],[1,"Almeja"]],[[2,"Piel de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 47","bonus":"Vel. hechizo","cells":[[[2,"Talismán Desconocido+"]],[[2,"Libro Maldición+"]],[[2,"Gema del Demonio+"],[1,"Almeja"]],[[2,"Cuerno Ballena Asesina"],[2,"Almeja"]],[[2,"Piel de Yeti+"],[2,"Almeja"]]]},{"level":"Lv 51","bonus":"Evasión mágica","cells":[[[2,"Medicina Desconocida"]],[[2,"Pieza de Tela"]],[[2,"Trozo de Tela+"],[1,"Almeja"]],[[2,"Trozo de Hielo+"],[2,"Almeja"]],[[2,"Bola de Hielo+"],[2,"Almeja"]]]},{"level":"Lv 55","bonus":"Evasión física","cells":[[[2,"Medicina Desconocida"]],[[2,"Pieza de Tela"]],[[2,"Trozo de Tela+"],[1,"Almeja"]],[[2,"Trozo de Hielo+"],[2,"Almeja"]],[[2,"Bola de Hielo+"],[2,"Almeja"]]]},{"level":"Lv 59","bonus":"DEF AD / AP","cells":[[[2,"Cola de Escorpión+"]],[[2,"Recuerdo del Demonio"]],[[2,"Hoja"],[1,"Almeja"]],[[2,"Piel de Yeti"],[2,"Almeja"]],[[2,"Colmillo de Tigre"],[2,"Almeja"]]]}],"pendientes":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Diente de Jabalí"]],[[2,"Piel de Lobo+"]],[[2,"Coletero Rojo"]]]},{"level":"Lv 8","bonus":"Def.","cells":[[],[],[[2,"Piel de Lobo"]],[[2,"Bilis de oso+"]],[[2,"Madeja"]]]},{"level":"Lv 15","bonus":"Atk.","cells":[[],[],[[2,"Bilis de oso"]],[[2,"Piel de Pie de Oso+"]],[[2,"Coletero Blanco+"]]]},{"level":"Lv 22","bonus":"Hab.","cells":[[],[],[[2,"Piel de Tigre"]],[[2,"Coletero Blanco"]],[[2,"Horquilla ornamental"]]]},{"level":"Lv 28","bonus":"Vel. atk. +5","cells":[[[2,"Trozo de Armadura Rota"]],[[2,"Porcelana Rota"]],[[2,"Shuriken+"],[1,"Espinas de Pescado"]],[[2,"Cola de Escorpión"],[1,"Espinas de Pescado"]],[[2,"Cola de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 33","bonus":"HP +5","cells":[[[2,"Hoja Oxidada"]],[[2,"Cartilla Esotérica+"]],[[2,"Telaraña"],[1,"Espinas de Pescado"]],[[2,"Saco de Veneno de Araña"],[1,"Almeja"]],[[2,"Saco de Huevos de Araña"],[1,"Almeja"]]]},{"level":"Lv 38","bonus":"Atk. +5","cells":[[[2,"Amuleto de Orco"]],[[2,"Amuleto de Orco+"]],[[2,"Ojos de Araña"],[1,"Espinas de Pescado"]],[[2,"Talismán Desconocido"],[1,"Almeja"]],[[2,"Libro Maldición"],[1,"Almeja"]]]},{"level":"Lv 42","bonus":"Hab. +5","cells":[[[2,"Amuleto de Orco"]],[[2,"Amuleto de Orco+"]],[[2,"Ojos de Araña"],[1,"Espinas de Pescado"]],[[2,"Talismán Desconocido"],[1,"Almeja"]],[[2,"Libro Maldición"],[1,"Almeja"]]]},{"level":"Lv 46","bonus":"Nerf atk. +5","cells":[[[2,"Talismán Desconocido+"]],[[2,"Libro Maldición+"]],[[2,"Gema del Demonio+"],[1,"Perla Blanca"]],[[2,"Cuerno Ballena Asesina"],[1,"Perla Azul"]],[[2,"Piel de Yeti+"],[1,"Perla Roja"]]]},{"level":"Lv 50","bonus":"Atk. +5","cells":[[[2,"Cola de Serpiente+"]],[[2,"Lengua de Rana"]],[[2,"Ancas de Rana"],[1,"Perla Blanca"]],[[2,"Bola de Hielo"],[1,"Perla Azul"]],[[2,"Melena Llameante"],[1,"Perla Roja"]]]},{"level":"Lv 54","bonus":"Hab. +5","cells":[[[2,"Cola de Serpiente+"]],[[2,"Lengua de Rana"]],[[2,"Ancas de Rana"],[1,"Perla Blanca"]],[[2,"Bola de Hielo"],[1,"Perla Azul"]],[[2,"Melena Llameante"],[1,"Perla Roja"]]]}],"brazaletes":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Diente de Jabalí"]],[[2,"Piel de Lobo+"]],[[2,"Coletero Rojo"]]]},{"level":"Lv 8","bonus":"Atk","cells":[[],[],[[2,"Piel de Lobo"]],[[2,"Bilis de oso+"]],[[2,"Madeja"]]]},{"level":"Lv 15","bonus":"HP","cells":[[],[],[[2,"Piel de Pie de Oso"]],[[2,"Piel de Tigre Blanco"]],[[2,"Crema Facial"]]]},{"level":"Lv 22","bonus":"Veneno","cells":[[],[],[[2,"Piel de Tigre"]],[[2,"Coletero Blanco"]],[[2,"Horquilla ornamental"]]]},{"level":"Lv 28","bonus":"CDR","cells":[[[2,"Trozo de Armadura Rota"]],[[2,"Porcelana Rota"]],[[2,"Shuriken+"],[1,"Espinas de Pescado"]],[[2,"Cola de Escorpión"],[2,"Espinas de Pescado"]],[[2,"Cola de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 33","bonus":"% Abs HP","cells":[[[2,"Bandera"]],[[2,"Cartilla Esotérica"]],[[2,"Aguja de Escorpión"],[1,"Espinas de Pescado"]],[[2,"Garra de Escorpión"],[1,"Almeja"]],[[2,"Piel de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 38","bonus":"% HP MAX","cells":[[[2,"Bandera"]],[[2,"Cartilla Esotérica"]],[[2,"Aguja de Escorpión"],[1,"Espinas de Pescado"]],[[2,"Garra de Escorpión"],[1,"Almeja"]],[[2,"Piel de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 42","bonus":"HP","cells":[[[2,"Hoja Oxidada"]],[[2,"Cartilla Esotérica+"]],[[2,"Telaraña"],[1,"Espinas de Pescado"]],[[2,"Saco de Veneno de Araña"],[1,"Almeja"]],[[2,"Saco de Huevos de Araña"],[1,"Almeja"]]]},{"level":"Lv 46","bonus":"Res Hab","cells":[[[2,"Talismán Desconocido+"]],[[2,"Libro Maldición+"]],[[2,"Gema del Demonio+"],[1,"Perla Blanca"]],[[2,"Cuerno Ballena Asesina"],[1,"Perla Azul"]],[[2,"Piel de Yeti+"],[1,"Perla Roja"]]]},{"level":"Lv 50","bonus":"Hab","cells":[[[2,"Patas de Araña"]],[[2,"Gema del Demonio"]],[[2,"Recuerdo del Demonio+"],[1,"Perla Blanca"]],[[2,"Huesos de los dedos"],[1,"Perla Azul"]],[[2,"Símbolo del Guerrero"],[1,"Perla Roja"]]]},{"level":"Lv 54","bonus":"Crítico","cells":[[[2,"Cola de Escorpión+"]],[[2,"Recuerdo del Demonio"]],[[2,"Hoja"],[1,"Perla Blanca"]],[[2,"Piel de Yeti"],[1,"Perla Azul"]],[[2,"Colmillo de Tigre"],[1,"Perla Roja"]]]}],"collares":[{"level":"Lv 0","bonus":"","cells":[[],[],[[2,"Diente de Jabalí"]],[[2,"Piel de Lobo+"]],[[2,"Coletero Rojo"]]]},{"level":"Lv 8","bonus":"Vel. mov.","cells":[[],[],[[2,"Piel de Lobo"]],[[2,"Bilis de oso+"]],[[2,"Madeja"]]]},{"level":"Lv 15","bonus":"Crítico.","cells":[[],[],[[2,"Bilis de oso"]],[[2,"Piel de Pie de Oso+"]],[[2,"Coletero Blanco+"]]]},{"level":"Lv 22","bonus":"Res. flecha.","cells":[[],[],[[2,"Piel de Tigre"]],[[2,"Coletero Blanco"]],[[2,"Horquilla ornamental"]]]},{"level":"Lv 28","bonus":"Dur. hab.","cells":[[[2,"Trozo de Armadura Rota"]],[[2,"Porcelana Rota"]],[[2,"Shuriken+"],[1,"Espinas de Pescado"]],[[2,"Cola de Escorpión"],[2,"Espinas de Pescado"]],[[2,"Cola de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 33","bonus":"Curación.","cells":[[[2,"Trozo de Armadura Rota"]],[[2,"Porcelana Rota"]],[[2,"Shuriken+"],[1,"Espinas de Pescado"]],[[2,"Cola de Escorpión"],[2,"Espinas de Pescado"]],[[2,"Cola de Serpiente"],[1,"Almeja"]]]},{"level":"Lv 38","bonus":"Hab.","cells":[[[2,"Amuleto de Orco"]],[[2,"Amuleto de Orco+"]],[[2,"Ojos de Araña"],[1,"Espinas de Pescado"]],[[2,"Talismán Desconocido"],[1,"Almeja"]],[[2,"Libro Maldición"],[1,"Almeja"]]]},{"level":"Lv 42","bonus":"Atk.","cells":[[[2,"Amuleto de Orco"]],[[2,"Amuleto de Orco+"]],[[2,"Ojos de Araña"],[1,"Espinas de Pescado"]],[[2,"Talismán Desconocido"],[1,"Almeja"]],[[2,"Libro Maldición"],[1,"Almeja"]]]},{"level":"Lv 46","bonus":"Crítico.","cells":[[[2,"Talismán Desconocido+"]],[[2,"Libro Maldición+"]],[[2,"Gema del Demonio+"],[1,"Perla Blanca"]],[[2,"Cuerno Ballena Asesina"],[1,"Perla Azul"]],[[2,"Piel de Yeti+"],[1,"Perla Roja"]]]},{"level":"Lv 50","bonus":"Tenacidad.","cells":[[[2,"Cola de Escorpión+"]],[[2,"Recuerdo del Demonio"]],[[2,"Hoja"],[2,"Perla Blanca"]],[[2,"Piel de Yeti"],[1,"Perla Azul"]],[[2,"Colmillo de Tigre"],[1,"Perla Roja"]]]},{"level":"Lv 54","bonus":"Pen.","cells":[[[2,"Patas de Araña"]],[[2,"Gema del Demonio"]],[[2,"Recuerdo del Demonio+"],[1,"Perla Blanca"]],[[2,"Huesos de los dedos"],[1,"Perla Azul"]],[[2,"Símbolo del Guerrero"],[1,"Perla Roja"]]]}]},"items":{"Aguja de Escorpión":{"en":"Scorpion Needle","img":"https://es-wiki.metin2.gameforge.com/images/0/07/Aguja_de_Escorpi%C3%B3n.png"},"Almeja":{"en":"Clam","img":"https://es-wiki.metin2.gameforge.com/images/c/c3/Almeja.png"},"Amuleto de Orco":{"en":"Orc Amulet","img":"https://es-wiki.metin2.gameforge.com/images/b/bd/Amuleto_de_Orco.png"},"Amuleto de Orco+":{"en":"Orc Amulet+","img":"https://es-wiki.metin2.gameforge.com/images/0/0a/Amuleto_de_Orco%2B.png"},"Ancas de Rana":{"en":"Frog's Legs","img":"https://es-wiki.metin2.gameforge.com/images/7/7e/Ancas_de_Rana.png"},"Bandera":{"en":"Flag","img":"https://es-wiki.metin2.gameforge.com/images/6/63/Bandera.png"},"Bilis de oso":{"en":"Bear Gall","img":"https://es-wiki.metin2.gameforge.com/images/4/44/Bilis_de_oso.png"},"Bilis de oso+":{"en":"Bear Gall+","img":"https://es-wiki.metin2.gameforge.com/images/2/29/Bilis_de_oso%2B.png"},"Bola de Hielo":{"en":"Ice Marble","img":"https://es-wiki.metin2.gameforge.com/images/d/dd/Bola_de_Hielo.png"},"Bola de Hielo+":{"en":"Ice Marble+","img":"https://es-wiki.metin2.gameforge.com/images/a/a5/Bola_de_Hielo%2B.png"},"Botín del Salvaje":{"en":"Savage's Booty","img":"https://es-wiki.metin2.gameforge.com/images/4/4f/Bot%C3%ADn_del_Salvaje.png"},"Cartilla Esotérica":{"en":"Esoteric Primer","img":"https://es-wiki.metin2.gameforge.com/images/4/43/Cartilla_Esot%C3%A9rica.png"},"Cartilla Esotérica+":{"en":"Esoteric Primer+","img":"https://es-wiki.metin2.gameforge.com/images/4/4f/Cartilla_Esot%C3%A9rica%2B.png"},"Cola de Escorpión":{"en":"Scorpion Tail","img":"https://es-wiki.metin2.gameforge.com/images/1/1d/Cola_de_Escorpi%C3%B3n.png"},"Cola de Escorpión+":{"en":"Scorpion Tail+","img":"https://es-wiki.metin2.gameforge.com/images/3/3c/Cola_de_Escorpi%C3%B3n%2B.png"},"Cola de Serpiente":{"en":"Snake Tail","img":"https://es-wiki.metin2.gameforge.com/images/a/a1/Cola_de_Serpiente.png"},"Cola de Serpiente+":{"en":"Snake Tail+","img":"https://es-wiki.metin2.gameforge.com/images/0/01/Cola_de_Serpiente%2B.png"},"Coletero Blanco":{"en":"White Hairband","img":"https://es-wiki.metin2.gameforge.com/images/1/13/Coletero_Blanco.png"},"Coletero Blanco+":{"en":"White Hairband+","img":"https://es-wiki.metin2.gameforge.com/images/f/f0/Coletero_Blanco%2B.png"},"Coletero Rojo":{"en":"Red Hairband","img":"https://es-wiki.metin2.gameforge.com/images/5/54/Coletero_Rojo.png"},"Colmillo de Tigre":{"en":"Tiger Fang","img":"https://es-wiki.metin2.gameforge.com/images/d/df/Colmillo_de_Tigre.png"},"Crema Facial":{"en":"Face Cream","img":"https://es-wiki.metin2.gameforge.com/images/0/01/Crema_Facial.png"},"Cuerno Ballena Asesina":{"en":"Ice Killer Whale Horn","img":"https://es-wiki.metin2.gameforge.com/images/d/d8/Cuerno_Ballena_Asesina.png"},"Diente de Jabalí":{"en":"Wild Boar Tooth","img":"https://es-wiki.metin2.gameforge.com/images/0/0a/Diente_de_Jabal%C3%AD.png"},"Diente de Orco":{"en":"Orc Tooth","img":"https://es-wiki.metin2.gameforge.com/images/c/c8/Diente_de_Orco.png"},"Diente de Orco+":{"en":"Orc Tooth+","img":"https://es-wiki.metin2.gameforge.com/images/0/09/Diente_de_Orco%2B.png"},"Espinas de Pescado":{"en":"Fishbones","img":"https://es-wiki.metin2.gameforge.com/images/6/68/Espinas_de_Pescado.png"},"Garra de Escorpión":{"en":"Scorpion Claw","img":"https://es-wiki.metin2.gameforge.com/images/1/1d/Garra_de_Escorpi%C3%B3n.png"},"Garra de Lobo":{"en":"Wolf Claw","img":"https://es-wiki.metin2.gameforge.com/images/0/0b/Garra_de_Lobo.png"},"Garra de Lobo+":{"en":"Wolf Claw+","img":"https://es-wiki.metin2.gameforge.com/images/c/cd/Garra_de_Lobo%2B.png"},"Gema del Demonio":{"en":"Demon's Gem","img":"https://es-wiki.metin2.gameforge.com/images/8/8e/Gema_del_Demonio.png"},"Gema del Demonio+":{"en":"Demon's Gem+","img":"https://es-wiki.metin2.gameforge.com/images/4/45/Gema_del_Demonio%2B.png"},"Hoja":{"en":"Leaf","img":"https://es-wiki.metin2.gameforge.com/images/1/1a/Hoja.png"},"Hoja Oxidada":{"en":"Rusty Blade","img":"https://es-wiki.metin2.gameforge.com/images/b/be/Hoja_Oxidada.png"},"Horquilla ornamental":{"en":"Ornamental Hairpin","img":"https://es-wiki.metin2.gameforge.com/images/d/d7/Horquilla_ornamental.png"},"Huesos de los dedos":{"en":"Finger Bones","img":"https://es-wiki.metin2.gameforge.com/images/b/b0/Huesos_de_los_dedos.png"},"Lechal":{"en":"Plant Sap","img":"https://es-wiki.metin2.gameforge.com/images/a/ad/Lechal.png"},"Lengua de Rana":{"en":"Frog Tongue","img":"https://es-wiki.metin2.gameforge.com/images/6/63/Lengua_de_Rana.png"},"Libro Maldición":{"en":"Curse Book","img":"https://es-wiki.metin2.gameforge.com/images/a/a6/Libro_Maldici%C3%B3n.png"},"Libro Maldición+":{"en":"Curse Book+","img":"https://es-wiki.metin2.gameforge.com/images/5/50/Libro_Maldici%C3%B3n%2B.png"},"Madeja":{"en":"Ball","img":"https://es-wiki.metin2.gameforge.com/images/0/03/Madeja.png"},"Medicina Desconocida":{"en":"Unknown Medicine","img":"https://es-wiki.metin2.gameforge.com/images/8/81/Medicina_Desconocida.png"},"Melena Llameante":{"en":"Flaming Mane","img":"https://es-wiki.metin2.gameforge.com/images/f/fb/Melena_Llameante.png"},"Ojos de Araña":{"en":"Spider Eyes","img":"https://es-wiki.metin2.gameforge.com/images/8/81/Ojos_de_Ara%C3%B1a.png"},"Ornamentación":{"en":"Ornament","img":"https://es-wiki.metin2.gameforge.com/images/2/25/Ornamentacion.png"},"Patas de Araña":{"en":"Spider Legs","img":"https://es-wiki.metin2.gameforge.com/images/c/c7/Patas_de_Ara%C3%B1a.png"},"Perla Azul":{"en":"Blue Pearl","img":"https://es-wiki.metin2.gameforge.com/images/e/e3/Perla_Azul.png"},"Perla Blanca":{"en":"White Pearl","img":"https://es-wiki.metin2.gameforge.com/images/6/61/Perla_Blanca.png"},"Perla Roja":{"en":"Blood-Red Pearl","img":"https://es-wiki.metin2.gameforge.com/images/6/65/Perla_Roja.png"},"Piel de Lobo":{"en":"Wolf Fur","img":"https://es-wiki.metin2.gameforge.com/images/1/10/Piel_de_Lobo.png"},"Piel de Lobo+":{"en":"Wolf Fur+","img":"https://es-wiki.metin2.gameforge.com/images/0/03/Piel_de_Lobo%2B.png"},"Piel de Pie de Oso":{"en":"Bear Foot Skin","img":"https://es-wiki.metin2.gameforge.com/images/6/61/Piel_de_Pie_de_Oso.png"},"Piel de Pie de Oso+":{"en":"Bear Foot Skin+","img":"https://es-wiki.metin2.gameforge.com/images/9/98/Piel_de_Pie_de_Oso%2B.png"},"Piel de Serpiente":{"en":"Snakeskin","img":"https://es-wiki.metin2.gameforge.com/images/d/d0/Piel_de_Serpiente.png"},"Piel de Tigre":{"en":"Tiger Hide","img":"https://es-wiki.metin2.gameforge.com/images/9/94/Piel_de_Tigre.png"},"Piel de Tigre Blanco":{"en":"White Tiger Hide","img":"https://es-wiki.metin2.gameforge.com/images/9/97/Piel_de_Tigre_Blanco.png"},"Piel de Yeti":{"en":"Yeti Fur","img":"https://es-wiki.metin2.gameforge.com/images/0/0c/Piel_de_Yeti.png"},"Piel de Yeti+":{"en":"Yeti Fur+","img":"https://es-wiki.metin2.gameforge.com/images/2/29/Piel_de_Yeti%2B.png"},"Pieza de Tela":{"en":"Piece of Fabric","img":"https://es-wiki.metin2.gameforge.com/images/7/77/Trozo_de_Tela.png"},"Porcelana Rota":{"en":"Broken Porcelain","img":"https://es-wiki.metin2.gameforge.com/images/7/74/Porcelana_Rota.png"},"Recuerdo del Demonio":{"en":"Demon's Keepsake","img":"https://es-wiki.metin2.gameforge.com/images/f/f0/Recuerdo_del_Demonio.png"},"Recuerdo del Demonio+":{"en":"Demon's Keepsake+","img":"https://es-wiki.metin2.gameforge.com/images/0/09/Recuerdo_del_Demonio%2B.png"},"Saco de Huevos de Araña":{"en":"Spider Egg Sack","img":"https://es-wiki.metin2.gameforge.com/images/1/14/Saco_de_Huevos_de_Ara%C3%B1a.png"},"Saco de Veneno de Araña":{"en":"Spider's Poison Sack","img":"https://es-wiki.metin2.gameforge.com/images/f/fc/Saco_de_Veneno_de_Ara%C3%B1a.png"},"Semillas Mágicas":{"en":"Magic Seeds","img":"https://es-wiki.metin2.gameforge.com/images/f/f3/Semillas_Magicas.png"},"Shuriken":{"en":"Shiriken","img":"https://es-wiki.metin2.gameforge.com/images/thumb/a/ac/Shuriken.png/32px-Shuriken.png"},"Shuriken+":{"en":"Shiriken+","img":"https://es-wiki.metin2.gameforge.com/images/6/61/Shuriken%2B.png"},"Símbolo del Guerrero":{"en":"Warrior's Symbol","img":"https://es-wiki.metin2.gameforge.com/images/8/82/S%C3%ADmbolo_del_Guerrero.png"},"Talismán Desconocido":{"en":"Unknown Talisman","img":"https://es-wiki.metin2.gameforge.com/images/6/61/Talism%C3%A1n_Desconocido.png"},"Talismán Desconocido+":{"en":"Unknown Talisman+","img":"https://es-wiki.metin2.gameforge.com/images/a/aa/Talism%C3%A1n_Desconocido%2B.png"},"Telaraña":{"en":"Spider Web","img":"https://es-wiki.metin2.gameforge.com/images/2/2b/Telara%C3%B1a.png"},"Trozo de Armadura Rota":{"en":"Piece of Broken Armour","img":"https://es-wiki.metin2.gameforge.com/images/c/c6/Trozo_de_Armadura_Rota.png"},"Trozo de Gema":{"en":"Piece of Gem","img":"https://es-wiki.metin2.gameforge.com/images/f/f4/Trozo_de_Gema.png"},"Trozo de Hielo+":{"en":"Piece of Ice+","img":"https://es-wiki.metin2.gameforge.com/images/6/6c/Trozo_de_Hielo%2B.png"},"Trozo de Tela+":{"en":"Piece of Fabric+","img":"https://es-wiki.metin2.gameforge.com/images/8/81/Trozo_de_Tela%2B.png"},"Uniforme Negro":{"en":"Black Uniform","img":"https://es-wiki.metin2.gameforge.com/images/2/26/Uniforme_Negro.png"}}}</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('game-data').textContent);
+const names={
+ armas:['Armas','Weapons'],armaduras:['Armaduras','Armour'],cascos:['Cascos','Helmets'],
+ escudos:['Escudos','Shields'],zapatos:['Zapatos','Shoes'],pendientes:['Pendientes','Earrings'],
+ brazaletes:['Brazaletes','Bracelets'],collares:['Collares','Necklaces']
+};
+const ui={
+ es:{title:'Guía de materiales de mejora',desc:'Todas las categorías de equipamiento · Mejoras de +5 a +9 · Sin costes',language:'Idioma',category:'Categoría',all:'Todas las categorías',print:'Imprimir / Guardar PDF',level:'Nivel',rows:'niveles',groups:'categorías',onlyYang:'Sin materiales (solo Yang)',search:'Buscar material',searchPlaceholder:'Ej.: alm, almeja, clam…',noResults:'No hay equipamientos que utilicen ese material. Prueba otro nombre o cambia la categoría.',matches:'niveles encontrados',note:'Los iconos se cargan desde las wikis de Gameforge y necesitan Internet. Si falta alguno, verás «!» en su lugar. Haz clic en un icono para consultar el material en la wiki oficial.',failed:'iconos no cargados'},
+ en:{title:'Upgrade Materials Guide',desc:'All equipment categories · Upgrades from +5 to +9 · No costs',language:'Language',category:'Category',all:'All categories',print:'Print / Save as PDF',level:'Level',rows:'levels',groups:'categories',onlyYang:'No materials (Yang only)',search:'Search material',searchPlaceholder:'E.g. clam, almeja…',noResults:'No equipment uses that material. Try a different name or category.',matches:'matching levels',note:'Item icons are loaded from Gameforge wikis and require internet access. If an icon fails, you will see “!” instead. Click an icon to view the item on the official wiki.',failed:'icons could not be loaded'}
+};
+const bonusMap={
+ 'Vel. mov. montura':'Mount movement speed','Vel. atq. montura':'Mount attack speed',
+ 'Máx. HP':'Max HP','Res. flecha':'Arrow resistance','Yang':'Yang','Drop':'Drop rate',
+ 'EXP':'EXP','Evasión física':'Physical evasion','Evasión mágica':'Magic evasion',
+ 'Vel. hechizo':'Casting speed','DEF AD / AP':'Defence / AP',
+ 'Atk.':'Attack','Atk. +5':'Attack +5','Def.':'Defence','HP +5':'HP +5',
+ 'Hab.':'Skill','Hab. +5':'Skill +5','Nerf atk. +5':'Attack reduction +5',
+ 'Vel. atk. +5':'Attack speed +5','% Abs HP':'HP absorption %','% HP MAX':'Max HP %',
+ 'Atk':'Attack','CDR':'Cooldown reduction','Crítico':'Critical','Crítico.':'Critical',
+ 'HP':'HP','Hab':'Skill','Res Hab':'Skill resistance','Veneno':'Poison',
+ 'Curación.':'Healing','Dur. hab.':'Skill duration','Pen.':'Piercing',
+ 'Res. flecha.':'Arrow resistance','Tenacidad.':'Tenacity','Vel. mov.':'Movement speed'
+};
+const $=id=>document.getElementById(id);
+const lang=$('lang'), category=$('category'), search=$('search');
+let broken=0;
+// Coincide con cualquier parte del nombre, en español o en inglés.
+// Ignora tildes y mayúsculas, y acepta plurales como «almejas» o «clams».
+function normalized(str){
+ return String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase().trim();
+}
+function matchesItem(es, query){
+ if(!query)return true;
+ const item=DATA.items[es];
+ const alternatives=[query];
+ if(query.length>3 && query.endsWith('s'))alternatives.push(query.slice(0,-1));
+ const spanish=normalized(es), english=normalized(item ? item.en : '');
+ return alternatives.some(q=>spanish.includes(q)||english.includes(q));
+}
+function matchesRow(row,query){
+ return !query || row.cells.some(cell=>cell.some(([,name])=>matchesItem(name,query)));
+}
+function el(tag,className,text){
+ const node=document.createElement(tag);
+ if(className)node.className=className;
+ if(text!==undefined)node.textContent=text;
+ return node;
+}
+function itemElement(qty,es,query){
+ const d=DATA.items[es];
+ const name=lang.value==='en'?d.en:es;
+ const wrap=el('div',matchesItem(es,query) && query ? 'mat matched' : 'mat');
+ const link=el('a','icon-link');
+ link.href='https://'+(lang.value==='en'?'en':'es')+'-wiki.metin2.gameforge.com/index.php/'+encodeURIComponent((lang.value==='en'?d.en:es).replace(/ /g,'_'));
+ link.target='_blank';link.rel='noopener noreferrer';
+ link.title=name;
+ const image=el('img');
+ image.src=d.img;image.alt=name;image.loading='lazy';image.width=30;image.height=30;image.referrerPolicy='no-referrer';
+ image.onerror=()=>{
+  if(!image.isConnected)return;
+  const fallback=el('span','icon-fallback','!');fallback.title=name;
+  image.replaceWith(fallback);broken++;
+  $('failures').textContent=broken+' '+ui[lang.value].failed+'.';
+ };
+ link.appendChild(image);
+ wrap.append(link,el('span','qty',qty+'×'),el('span','item-name',name));
+ return wrap;
+}
+function render(){
+ const locale=lang.value, t=ui[locale], cat=category.value, query=normalized(search.value);
+ document.documentElement.lang=locale;
+ document.title='Metin2 · '+t.title;
+ $('pageTitle').textContent=t.title;
+ $('description').textContent=t.desc;
+ $('langLabel').textContent=t.language;
+ $('categoryLabel').textContent=t.category;
+ $('searchLabel').textContent=t.search;
+ search.placeholder=t.searchPlaceholder;
+ search.setAttribute('aria-label',t.search);
+ $('print').textContent=t.print;
+ $('navCraft').textContent=locale==='es'?'01 · Equipo':'01 · Equipment';
+ $('breadcrumbHome').textContent=locale==='es'?'Inicio':'Home';
+ $('breadcrumbCurrent').textContent=locale==='es'?'Equipo':'Equipment';
+ $('filterTitle').textContent=locale==='es'?'Filtra tu equipamiento':'Filter your equipment';
+ $('filterHint').textContent=locale==='es'?'Encuentra materiales y mejoras al instante':'Find materials and upgrades instantly';
+ $('heroKicker').textContent=locale==='es'?'LA FORJA  /  MATERIALES':'THE FORGE  /  MATERIALS';
+ document.querySelectorAll('[data-home-link]').forEach(a=>a.href='index.html'+(locale==='en'?'?lang=en':''));
+ $('sourceNote').textContent=t.note;
+ for(const opt of category.options)opt.textContent=opt.value==='all'?t.all:names[opt.value][locale==='en'?1:0];
+ const root=$('tables');root.replaceChildren();broken=0;$('failures').textContent='';
+ const selectedKeys=cat==='all'?Object.keys(names):[cat];
+ let rowCount=0, shownCategories=0;
+ for(const key of selectedKeys){
+  const rows=DATA.categories[key].filter(row=>matchesRow(row,query));
+  if(!rows.length)continue;
+  shownCategories++;
+  rowCount+=rows.length;
+  const section=el('section','category');section.id='cat-'+key;
+  const hd=el('div','category-head');
+  hd.append(el('h2','category-title',names[key][locale==='en'?1:0]),el('span','count',rows.length+' '+t.rows));
+  section.appendChild(hd);
+  const scroll=el('div','table-scroller');
+  const table=el('table');table.setAttribute('aria-label',names[key][locale==='en'?1:0]);
+  const cg=el('colgroup');cg.appendChild(el('col','level-col'));for(let i=0;i<5;i++)cg.appendChild(el('col'));
+  table.appendChild(cg);
+  const thead=el('thead');const htr=el('tr');
+  for(const head of [t.level,'+5','+6','+7','+8','+9']){const th=el('th','',head);th.scope='col';htr.appendChild(th)}
+  thead.appendChild(htr);table.appendChild(thead);
+  const tb=el('tbody');
+  for(const row of rows){
+   const tr=el('tr');const th=el('th');th.scope='row';
+   th.appendChild(el('span','level',row.level));
+   if(row.bonus)th.appendChild(el('span','bonus',locale==='en'?(bonusMap[row.bonus]||row.bonus):row.bonus));
+   tr.appendChild(th);
+   for(const cell of row.cells){
+    const td=el('td');
+    if(!cell||!cell.length){td.appendChild(el('span','empty','—'));td.title=t.onlyYang;}
+    else for(const [qty,es] of cell)td.appendChild(itemElement(qty,es,query));
+    tr.appendChild(td);
+   }
+   tb.appendChild(tr);
+  }
+  table.appendChild(tb);scroll.appendChild(table);section.appendChild(scroll);root.appendChild(section);
+ }
+ if(!rowCount){
+  root.appendChild(el('div','no-results',t.noResults));
+ }
+ const groupLabel=shownCategories===1?(locale==='es'?'categoría':'category'):t.groups;
+ const levelLabel=rowCount===1?(query?(locale==='es'?'nivel encontrado':'matching level'):(locale==='es'?'nivel':'level')):(query?t.matches:t.rows);
+ $('stats').textContent=shownCategories+' '+groupLabel+' · '+rowCount+' '+levelLabel;
+}
+for(const key of Object.keys(names)){const opt=el('option','',names[key][0]);opt.value=key;category.appendChild(opt)}
+// Permite abrir desde la portada una categoría o búsqueda concretas.
+const params = new URLSearchParams(window.location.search);
+const requestedCategory = params.get('categoria') || params.get('category');
+if (requestedCategory && Object.prototype.hasOwnProperty.call(names, requestedCategory)) category.value=requestedCategory;
+const requestedSearch = params.get('buscar') || params.get('q');
+if (requestedSearch) search.value=requestedSearch.slice(0,100);
+if (params.get('lang') === 'en') lang.value='en';
+lang.addEventListener('change',render);
+category.addEventListener('change',render);
+let searchTimer;
+search.addEventListener('input',()=>{
+ clearTimeout(searchTimer);
+ searchTimer=setTimeout(render,120);
+});
+$('print').addEventListener('click',()=>window.print());
+render();
+</script>
+</body>
+</html>
